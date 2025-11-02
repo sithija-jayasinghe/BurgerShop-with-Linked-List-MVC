@@ -48,19 +48,19 @@ public class updateOrder extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel5.setFont(new java.awt.Font("Segoe Print", 0, 12)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Yu Gothic Medium", 0, 12)); // NOI18N
         jLabel5.setText("Customer Name");
 
-        jLabel6.setFont(new java.awt.Font("Segoe Print", 0, 12)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Yu Gothic Medium", 0, 12)); // NOI18N
         jLabel6.setText("Quantity");
 
-        jLabel4.setFont(new java.awt.Font("Segoe Print", 0, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 12)); // NOI18N
         jLabel4.setText("Customer ID");
 
-        jLabel3.setFont(new java.awt.Font("Segoe Print", 0, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Yu Gothic Medium", 0, 12)); // NOI18N
         jLabel3.setText("Order ID");
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 0, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Yu Gothic Medium", 0, 12)); // NOI18N
         jLabel2.setText("Order Status");
 
         cmbOrderStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Preparing ", "Cancel", "Delivered" }));
@@ -132,7 +132,7 @@ public class updateOrder extends javax.swing.JFrame {
                     .addComponent(txtCustName)
                     .addComponent(txtQty)
                     .addComponent(cmbOrderStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnUpdate)
@@ -168,18 +168,24 @@ public class updateOrder extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancel)
                     .addComponent(btnUpdate))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();

@@ -49,7 +49,7 @@ public class SearchBurgerForm extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel2.setText("Order ID");
 
         txtOrderId.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -67,18 +67,18 @@ public class SearchBurgerForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel3.setText("Customer Id");
 
-        jLabel4.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel4.setText("Customer Name");
 
         txtCustomerName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel6.setText("Order Status");
 
-        jLabel5.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel5.setText("Order Qty");
 
         txtOrderQty.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

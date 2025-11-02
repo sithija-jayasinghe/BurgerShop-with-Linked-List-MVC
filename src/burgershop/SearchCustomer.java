@@ -54,7 +54,7 @@ public class SearchCustomer extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblCustId.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        lblCustId.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         lblCustId.setText("Enter Customer ID :");
 
         txtCustId.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +63,7 @@ public class SearchCustomer extends javax.swing.JFrame {
             }
         });
 
-        lblCustName.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        lblCustName.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         lblCustName.setText("Order ID :");
 
         txtOrderId.addActionListener(new java.awt.event.ActionListener() {
@@ -78,13 +78,13 @@ public class SearchCustomer extends javax.swing.JFrame {
             }
         });
 
-        lblCustName1.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        lblCustName1.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         lblCustName1.setText("Name  :");
 
-        lblCustName2.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        lblCustName2.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         lblCustName2.setText("Quantity : ");
 
-        lblCustName3.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        lblCustName3.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         lblCustName3.setText("Status : ");
 
         txtOrderStatus.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +199,7 @@ public class SearchCustomer extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblCustName3)
                     .addComponent(txtOrderStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSearchCustomer)
                     .addComponent(btnExit))
