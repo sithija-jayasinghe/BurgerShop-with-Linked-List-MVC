@@ -57,12 +57,12 @@ public class AddNewBurgerForm extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel2.setText("Order ID");
 
         txtOrderId.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel3.setText("Customer Id");
 
         txtCustomerId.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -78,14 +78,14 @@ public class AddNewBurgerForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel4.setText("Customer Name");
 
         txtCustomerName.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
         txtOrderQty.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Segoe Print", 0, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel5.setText("Order Qty");
 
         btnAddOrder.setBackground(new java.awt.Color(102, 255, 102));
@@ -162,7 +162,7 @@ public class AddNewBurgerForm extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtOrderId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -172,9 +172,7 @@ public class AddNewBurgerForm extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(txtCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(54, 54, 54))
+                    .addComponent(txtCustomerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -203,27 +201,33 @@ public class AddNewBurgerForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOrderActionPerformed
+        String regex = "^0\\d{9}$";
         String orderId=txtOrderId.getText();
         String customerId=txtCustomerId.getText();
-        String customerName=txtCustomerName.getText();
-        int orderQty=Integer.parseInt(txtOrderQty.getText());
-        Burger burger=new Burger(orderId, customerId, customerName, orderQty);
-        
-        int res=JOptionPane.showConfirmDialog(this, "Do you want to add ?");
-        if(res==JOptionPane.YES_OPTION){
-            try{
-                boolean isAdded = BurgerController.addNewBurger(burger);
-                if(isAdded){
-                   JOptionPane.showMessageDialog(this, "Added Successfully...");
-                    txtOrderId.setText(BurgerController.generateOrderId());
-                    txtCustomerId.setText("");
-                    txtCustomerName.setText("");
-                    txtOrderQty.setText(""); 
+        if(!customerId.matches(regex)){
+            JOptionPane.showMessageDialog(this, "Enter a valid Customer ID ex : 0712345678");
+        }else {
+            String customerName=txtCustomerName.getText();
+            int orderQty=Integer.parseInt(txtOrderQty.getText());
+            Burger burger=new Burger(orderId, customerId, customerName, orderQty);
+
+            int res=JOptionPane.showConfirmDialog(this, "Do you want to add ?");
+            if(res==JOptionPane.YES_OPTION){
+                try{
+                    boolean isAdded = BurgerController.addNewBurger(burger);
+                    if(isAdded){
+                       JOptionPane.showMessageDialog(this, "Added Successfully...");
+                        txtOrderId.setText(BurgerController.generateOrderId());
+                        txtCustomerId.setText("");
+                        txtCustomerName.setText("");
+                        txtOrderQty.setText(""); 
+                    }
+                }catch(IOException ex){
+
                 }
-            }catch(IOException ex){
-        
             }
         }
+        
     }//GEN-LAST:event_btnAddOrderActionPerformed
 
     private void txtCustomerIdKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCustomerIdKeyReleased
